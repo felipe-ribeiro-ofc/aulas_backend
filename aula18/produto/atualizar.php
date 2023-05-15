@@ -10,7 +10,6 @@ if (isset($_POST["nome"]) && isset($_POST["descricao"]) && isset($_POST["preco"]
 
    //String com o comando SQL para ser executado no DB
    $sql = "UPDATE produto SET `nome`=?, `descricao`=?, `preco`=?, `foto`=? WHERE  `idproduto`=?;";
-   echo $sql;
 
    //Prepara o SQL para ser executado no banco de dados
    $comando = $conexao->prepare($sql);
@@ -22,4 +21,4 @@ if (isset($_POST["nome"]) && isset($_POST["descricao"]) && isset($_POST["preco"]
    $comando->execute();
 }
 //abre o arquivo form.php
-header("Location: form.php");
+header("Location: produtos.php");

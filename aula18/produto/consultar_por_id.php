@@ -23,5 +23,4 @@ if (isset($_GET['id'])) {
    //pegar a primeira linha de resultado
    $linha = $resultado->fetch_assoc();
 
-   var_dump($linha);
 }
