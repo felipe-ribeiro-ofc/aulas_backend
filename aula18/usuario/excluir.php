@@ -19,4 +19,4 @@ if (isset($_GET['id'])) {
 
    //abre o arquivo form.php
 }
-header("Location: usuarios.php");
+header("Location: index.php");

@@ -21,4 +21,4 @@ if (isset($_POST["nome"]) && isset($_POST["login"]) && isset($_POST["senha"])) {
    $comando->execute();
 }
 //abre o arquivo form.php
-header("Location: usuarios.php");
+header("Location: index.php");
