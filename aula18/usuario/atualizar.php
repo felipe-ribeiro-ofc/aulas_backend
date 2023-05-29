@@ -2,7 +2,7 @@
 require_once "../conexao.php";
 if (isset($_POST["nome"]) && isset($_POST["login"]) && isset($_POST["senha"])) {
    require_once "salvar_foto.php";
-   $id=$_POST["id"];
+   $id = $_POST["id"];
    $nome = $_POST["nome"];
    $login = $_POST["login"];
    $senha = password_hash($_POST["senha"], PASSWORD_DEFAULT);
