@@ -3,7 +3,8 @@ include_once "../template/cabecalho.php";
 include_once "../produto/consultar_todos.php";
 ?>
 
-<!-- Início do Menu -->
+
+<!-- Inicio do Menu -->
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Menu</a>
@@ -12,6 +13,8 @@ include_once "../produto/consultar_todos.php";
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
         <?php
         $categorias = [];
         foreach ($produtos as $key => $value) :
@@ -23,15 +26,19 @@ include_once "../produto/consultar_todos.php";
                 <?php echo $value["categoria"]; ?>
               </a>
             </li>
+
         <?php
           endif;
         endforeach;
         ?>
+
         <li class="nav-item">
           <a class="nav-link" href="../produto/index.php">
             Acesso Restrito
           </a>
         </li>
+
+
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -41,12 +48,14 @@ include_once "../produto/consultar_todos.php";
   </div>
 </nav>
 <!-- Final do Menu -->
+
 <hr>
+
 <!-- Lista de Produtos -->
 <div class="container">
-  <div class="row row-cols-4 g-4">
-    <?php foreach ($produtos as $key => $produto) :
-    ?>
+  <div class="row row-cols-4 g-3">
+
+    <?php foreach ($produtos as $key => $produto) :  ?>
       <div class="col">
         <div class="card">
           <img src="../uploads/<?php echo $produto["foto"]; ?>" class="card-img-top" alt="...">
@@ -57,11 +66,13 @@ include_once "../produto/consultar_todos.php";
         </div>
       </div>
     <?php endforeach; ?>
+
   </div>
 </div>
-
 <!-- Final da Lista de Produtos -->
+
 <hr>
+
 
 <?php
 include_once "../template/rodape.php";
