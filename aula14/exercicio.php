@@ -7,4 +7,3 @@ echo $r;
     //faz um redirecionamento
     header("Location:form.html");
 }
-?>

@@ -2,7 +2,6 @@
 include_once "../template/cabecalho.php";
 include_once "../produto/consultar_todos.php";
 include_once "../produto/consultar_categoria.php";
-include_once "../controla_sessao/controla.php";
 ?>
 
 
@@ -19,10 +18,10 @@ include_once "../controla_sessao/controla.php";
 
         <?php
      
-        foreach ($cats as $key => $value) :?>
+        foreach ($esps as $key => $value) :?>
             <li class="nav-item">
-              <a class="nav-link" href="index.php?categoria=<?= $value["categoria"]; ?>">
-                <?php echo $value["categoria"]; ?>
+              <a class="nav-link" href="index.php?esporte=<?= $value["esporte"]; ?>">
+                <?php echo $value["esporte"]; ?>
               </a>
             </li>
 
@@ -53,13 +52,12 @@ include_once "../controla_sessao/controla.php";
 <div class="container">
   <div class="row row-cols-4 g-3">
 
-    <?php foreach ($produtos as $key => $produto) :  ?>
+    <?php foreach ($eventos as $key => $evento) :  ?>
       <div class="col">
         <div class="card">
-          <img src="../uploads/<?php echo $produto["foto"]; ?>" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title"><?php echo $produto["nome"]; ?></h5>
-            <a href="#" class="btn btn-primary">Ver produto</a>
+            <h5 class="card-title"><?php echo $evento["nome"]; ?></h5>
+            <a href="#" class="btn btn-primary">Ver evento</a>
           </div>
         </div>
       </div>

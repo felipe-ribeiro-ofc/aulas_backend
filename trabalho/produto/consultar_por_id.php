@@ -6,13 +6,14 @@ if (isset($_GET['id'])) {
    $id = $_GET['id'];
 
    //String com o comando SQL para ser executado no DB
-   $sql = "SELECT * FROM usuario WHERE idusuario=?; ";
+   $sql = "SELECT * FROM evento WHERE idevento=?; ";
 
    //Prepara o SQL para ser executado no banco de dados
    $comando = $conexao->prepare($sql);
 
    //adiciona os valores nos parâmetros
    $comando->bind_param("i", $id);
+
    //executa o SQL - Comando no Banco de Dados
    $comando->execute();
 
@@ -20,6 +21,5 @@ if (isset($_GET['id'])) {
    $resultado = $comando->get_result();
 
    //pegar a primeira linha de resultado
-   $usuario = $resultado->fetch_assoc();
-
+   $linha = $resultado->fetch_assoc();
 }

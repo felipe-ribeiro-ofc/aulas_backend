@@ -1,5 +1,6 @@
 <?php require_once "consultar_por_id.php" ?>
 <?php require_once "../template/cabecalho.php"; ?>
+<?php include_once "../controla_sessao/controla.php"; ?>
 <div class="container">
         <h1>Cadastro de Usuário</h1>
         <hr>

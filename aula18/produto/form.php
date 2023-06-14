@@ -1,5 +1,6 @@
 <?php require_once "consultar_por_id.php" ?>
 <?php require_once "../template/cabecalho.php"; ?>
+<?php include_once "../controla_sessao/controla.php"; ?>
 <h1>Cadastro de Produto</h1>
 <hr>
 
@@ -11,6 +12,9 @@
 
         <label for="descricao">Descrição</label><br>
         <textarea name="descricao" id="descricao"><?php echo $produto['descricao'] ?? ""; ?></textarea><br>
+
+        <label for="categoria">Categoria</label><br>
+        <textarea name="categoria" id="categoria"><?php echo $produto['categoria'] ?? ""; ?></textarea><br>
 
         <label for="preco">Preço</label><br>
         <input type="number" step="0.01" name="preco" id="preco" value="<?php echo $produto['preco'] ?? "0.00"; ?>"><br>
