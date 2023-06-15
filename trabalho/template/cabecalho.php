@@ -20,6 +20,9 @@
             <div class="carousel-item">
                 <img src="../imagens/olimpiada.jpg" class="d-block w-100" alt="...">
             </div>
+            <div class="carousel-item">
+                <img src="../imagens/estadios.jpg" class="d-block w-100" alt="...">
+            </div>
         </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
